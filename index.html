@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SOUNDSTRIKE</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="SOUNDSTRIKE — Portfolio & Voice Datasets. Real‑human voice recording for LLM training." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <div class="container">
+  <main class="frame" aria-label="SOUNDSTRIKE landing">
     <h1 class="title">SOUNDSTRIKE</h1>
-    <div class="buttons">
-      <a href="#" class="btn">🎵 Portfolio</a>
-      <a href="#" class="btn">🎙️ Voice Data</a>
+
+    <section class="panel" aria-label="Primary choices">
+      <!-- Portfolio -->
+      <article class="card" id="portfolio-card">
+        <img src="assets/img/hud-corners.svg" class="hud" alt="" aria-hidden="true">
+        <h2>PORTFOLIO</h2>
+        <p>Listen to my latest audio projects.</p>
+        <div class="cta-row">
+          <a class="cta outline" href="#portfolio" data-sfx="click">VIEW PROJECTS</a>
+        </div>
+      </article>
+
+      <!-- Voice datasets -->
+      <article class="card" id="datasets-card">
+        <img src="assets/img/hud-corners.svg" class="hud" alt="" aria-hidden="true">
+        <h2>VOICE DATASETS</h2>
+        <p>High‑quality human speech data for AI.</p>
+        <div class="cta-row">
+          <a class="cta" href="#datasets" data-sfx="confirm">LEARN MORE</a>
+        </div>
+      </article>
+    </section>
+
+    <div class="name">STEPHEN LIMBEROPOULOS</div>
+
+    <div class="toolbar">
+      <button id="muteBtn" class="toggle" aria-pressed="false">🔊 UI Sounds</button>
     </div>
-    <footer class="footer">Stephen Limberopoulos</footer>
-  </div>
+  </main>
+
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

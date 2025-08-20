@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 120' width='200' height='120'>
+  <g fill='none' stroke='#28d7ff' stroke-opacity='0.35' stroke-width='2'>
+    <path d='M4 25 V4 H25' />
+    <path d='M196 25 V4 H175' />
+    <path d='M4 95 V116 H25' />
+    <path d='M196 95 V116 H175' />
+  </g>
+</svg>
