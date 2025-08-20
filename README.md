@@ -1,17 +1,13 @@
 # Soundstrike Website
 
-**Soundstrike Website** — A cyber-industrial portfolio and service site deployed via GitHub Pages at [soundstrike.ai](https://soundstrike.ai).
+**Summary:** Deploys the approved neon/cyber homepage on GitHub Pages at **soundstrike.ai**.
 
-## Description
+**Description:**  
+Two-panel landing page with circuit-texture background. Left card: **PORTFOLIO** (“Listen to our latest audio projects”) with inset **VIEW PROJECTS** button. Right card: **VOICE DATASETS** (“High‑quality human speech data for AI”) with **LEARN MORE** button. Top title **SOUNDSTRIKE**; footer shows **STEPHEN LIMBEROPOULOS** centered in neon blue. Hover-only glow interactions, plus subtle UI SFX (title, buttons, name, and cards).
 
-This site is the public hub for **Stephen Limberopoulos – Audio Engineer**.
+![Homepage Preview](screenshot.png)
 
-It features:
-
-- **Soundstrike Studio** → promotion of recording, mixing, and beat production services for artists (rock, rap, electronic).
-- **Voice Datasets** → high-quality speech data offerings for AI projects.
-- A **futuristic, game-UI aesthetic** inspired by industrial/electronic acts (Grendel, Suicide Commando).
-- **Interactive UI sounds** (hover/click SFX) for buttons, cards, and site title.
-- Responsive, neon-lit design with textured backgrounds (circuit traces + noise overlays).
-
-Built with vanilla **HTML/CSS/JS** and deployed through **GitHub Pages** with a custom domain (**soundstrike.ai**).
+**Deploy notes**
+- Keep `CNAME` at repo root with `soundstrike.ai`
+- Pages → Source = your branch `/ (root)`; check **Enforce HTTPS**
+- DNS: `@` A/ALIAS to GitHub Pages IPs shown in Pages, `www` CNAME to your `username.github.io`

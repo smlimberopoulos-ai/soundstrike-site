@@ -1,1 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="black"/><path d="M10 10h80v80h-80z" stroke="#00f0ff" fill="none"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="none"/>
+  <g stroke="#38d0ff" stroke-opacity="0.12" stroke-width="2" fill="none">
+    <path d='M0,0 L1400,0'/>
+<path d='M0,90 L1400,90'/>
+<path d='M0,180 L1400,180'/>
+<path d='M0,270 L1400,270'/>
+<path d='M0,360 L1400,360'/>
+<path d='M0,450 L1400,450'/>
+<path d='M0,540 L1400,540'/>
+<path d='M0,630 L1400,630'/>
+<path d='M0,720 L1400,720'/>
+<path d='M0,810 L1400,810'/>
+<path d='M0,900 L1400,900'/>
+    <path d='M0,0 L0,900'/>
+<path d='M140,0 L140,900'/>
+<path d='M280,0 L280,900'/>
+<path d='M420,0 L420,900'/>
+<path d='M560,0 L560,900'/>
+<path d='M700,0 L700,900'/>
+<path d='M840,0 L840,900'/>
+<path d='M980,0 L980,900'/>
+<path d='M1120,0 L1120,900'/>
+<path d='M1260,0 L1260,900'/>
+<path d='M1400,0 L1400,900'/>
+    <path d="M70,140 L260,140 L320,240 L520,240" />
+    <path d="M1050,160 L860,160 L800,300 L660,300" />
+    <path d="M300,620 L460,620 L520,480 L700,480" />
+    <path d="M860,700 L900,580 L1060,580 L1160,520" />
+  </g>
+  <g fill="#60e6ff" fill-opacity="0.10" stroke="none">
+    <circle cx="260" cy="140" r="6"/><circle cx="860" cy="160" r="6"/>
+    <circle cx="460" cy="620" r="6"/><circle cx="900" cy="580" r="6"/>
+  </g>
+</svg>

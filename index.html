@@ -1,30 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soundstrike</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SOUNDSTRIKE</title>
+  <meta name="theme-color" content="#071a23" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Exo+2:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="/favicon.png" sizes="any" />
 </head>
 <body>
-  <div class="container">
-    <h1 class="title">SOUNDSTRIKE</h1>
-    <div class="cards">
-      <div class="card">
-        <h2>SOUNDSTRIKE STUDIO</h2>
-        <p>Recording, mixing & beats for artists.</p>
-        <p>Listen to our latest audio projects.</p>
-        <a href="/portfolio" class="button">VIEW PROJECTS</a>
-      </div>
-      <div class="card">
-        <h2>VOICE DATASETS</h2>
-        <p>High-quality human speech data for AI.</p>
-        <a href="/voice-data" class="button">LEARN MORE</a>
-      </div>
+  <div class="bg bg-noise"></div>
+  <div class="bg bg-circuit"></div>
+
+  <header class="site-header">
+    <h1 class="logo glow" id="site-title">SOUNDSTRIKE</h1>
+  </header>
+
+  <main class="hero">
+    <section class="card sfx-card" id="card-portfolio">
+      <div class="card-outline"></div>
+      <h2>PORTFOLIO</h2>
+      <p>Listen to our latest audio projects.</p>
+      <a class="btn btn-outline sfx-btn" href="/portfolio" id="btn-portfolio">VIEW PROJECTS</a>
+    </section>
+
+    <section class="card sfx-card" id="card-datasets">
+      <div class="card-outline"></div>
+      <h2>VOICE DATASETS</h2>
+      <p>High‑quality human speech data for AI.</p>
+      <a class="btn btn-accent sfx-btn" href="/voice-datasets" id="btn-datasets">LEARN MORE</a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="sig-wrap sfx-name" id="sig">
+      <span class="sig">STEPHEN LIMBEROPOULOS</span>
     </div>
-    <footer>
-      <p class="footer-name">STEPHEN LIMBEROPOULOS<br><span>Audio Engineer</span></p>
-    </footer>
-  </div>
+    <a class="pill" href="/ui-sounds">UI Sounds</a>
+    <button class="mute" id="mute" aria-label="Toggle UI sounds">🔇</button>
+
+    <audio id="sfx-hover" preload="auto" src="/assets/ui-hover.wav"></audio>
+    <audio id="sfx-click" preload="auto" src="/assets/ui-click.wav"></audio>
+    <audio id="sfx-title" preload="auto" src="/assets/ui-title.wav"></audio>
+    <audio id="sfx-name" preload="auto" src="/assets/ui-name.wav"></audio>
+  </footer>
+
+  <script>
+    const sHover = document.getElementById('sfx-hover');
+    const sClick = document.getElementById('sfx-click');
+    const sTitle = document.getElementById('sfx-title');
+    const sName  = document.getElementById('sfx-name');
+    const muteBtn = document.getElementById('mute');
+    let muted = true;
+    const safePlay = snd => { if (!muted && snd) { try { snd.currentTime = 0; snd.play(); } catch(e){} } };
+
+    document.getElementById('site-title').addEventListener('mouseenter', () => safePlay(sTitle));
+    document.querySelectorAll('.sfx-btn').forEach(b=>{
+      b.addEventListener('mouseenter', () => safePlay(sHover));
+      b.addEventListener('click', () => safePlay(sClick));
+    });
+    document.getElementById('sig').addEventListener('mouseenter', () => safePlay(sName));
+    document.querySelectorAll('.sfx-card').forEach(c=>{
+      c.addEventListener('mouseenter', () => safePlay(sHover));
+      c.addEventListener('click', () => safePlay(sClick));
+    });
+    muteBtn.addEventListener('click', () => {
+      muted = !muted;
+      muteBtn.textContent = muted ? '🔇' : '🔊';
+    });
+  </script>
 </body>
 </html>
